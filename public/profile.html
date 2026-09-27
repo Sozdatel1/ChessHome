@@ -1517,7 +1517,7 @@
       const areaD = lineD + ` L${pts[pts.length - 1].x},${H} L${pts[0].x},${H} Z`;
       svg.innerHTML = `<defs><linearGradient id="rg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="var(--accent)" stop-opacity=".35"/><stop offset="100%" stop-color="var(--accent)" stop-opacity="0"/></linearGradient></defs>
     <path d="${areaD}" fill="url(#rg)"/><path d="${lineD}" fill="none" stroke="var(--accent)" stroke-width="2.5"/>
-    ${pts.map(p => `<circle cx="${p.x}" cy="${p.y}" r="5" fill="var(--bg-secondary)" stroke="var(--accent)" stroke-width="2" data-val="${p.val}" onmouseenter="showTooltip(event,this)" onmouseleave="hideTooltip()"/>`).join('')}
+    ${pts.map(p => `<circle cx="${p.x}" cy="${p.y}" r="1.5" fill="var(--bg-secondary)" stroke="var(--accent)" stroke-width="2" data-val="${p.val}" onmouseenter="showTooltip(event,this)" onmouseleave="hideTooltip()"/>`).join('')}
     <text x="${pts[pts.length - 1].x}" y="${pts[pts.length - 1].y - 10}" text-anchor="middle" fill="var(--accent)" font-size="12" font-weight="700">${ratings[ratings.length - 1]}</text>`;
     }
     function showTooltip(e, el) {
